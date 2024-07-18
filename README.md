@@ -3,8 +3,6 @@
 
 ## 環境構築コマンド
 ```
-//フォルダ移動
-cd frontend
 
 //インストール
 npm install .   
