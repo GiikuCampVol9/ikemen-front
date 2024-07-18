@@ -830,6 +830,10 @@ video {
   width: 4rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .flex-col {
   flex-direction: column;
 }
