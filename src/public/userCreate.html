@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/userCreate.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>ユーザー作成ページ</title>
+    <meta name="description" content="ユーザーアカウント作成ページ">
+</head>
+
+<body class="h-screen bg-custom-image bg-no-repeat bg-contain bg-bottom" background="../images/ラーメンイラスト 1.png">
+    <header>
+        <img src="../images/中華マーク並び.png" alt="中華">
+    </header>
+    <main class="flex flex-col justify-center items-center h-2/3 mt-11 mb-20 ">
+        <div class="flex flex-col items-center">
+            <div class="border-2 w-24 h-24 rounded-full border-red-700 flex items-center justify-center">
+                <i class="material-icons text-red-700" style="font-size: 80px;" aria-label="person icon">person</i>
+            </div>
+            <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
+                <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="name icon">person</i>
+                <input class="text-gray-300 ml-6 text-2xl w-32" type="text" name="name" id="name" placeholder="ナマエ">
+            </div>
+            <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
+                <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="email icon">mail</i>
+                <input class="text-gray-300 ml-6 text-2xl w-32" type="text" name="name" id="name" placeholder="メール">
+            </div>
+            <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
+                <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="password icon">lock</i>
+                <input class="text-gray-300 ml-6 text-2xl w-32" type="text" name="name" id="name" placeholder="パスワード">
+            </div>
+            <button onclick="location.href='./myPage.html'" class="mt-10 px-4 py-2 bg-red-700 text-white rounded">作成</button>
+        </div>
+    </main>
+    <footer class="flex justify-center">
+        <img src="../images/中華マーク並び.png" alt="中華">
+    </footer>
+</body>
+
+</html>
