@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/search.css">
+    <title>search</title>
+</head>
+<body>
+    <header>
+        <img src="../images/中華マーク並び.png" alt="中華">
+    </header>
+
+    <main class="h-4/5 mt-10 mb-10">
+        <div class="flex items-center justify-center">
+            <form action="#" method="post" class="space-y-4 w-5/6">
+
+                <!-- キーワード検索 -->
+                <div class="search">
+                    <label for="ikemen-search"></label>
+                    <input type="search" name="ikemen-search" id="ikemen-search" placeholder="キーワードから検索" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+        
+                <!-- 種類の指定 -->
+                <div class="flex items-center space-x-6">
+                    <p class="mb-0">味</p>
+                    <select id="taste" name="taste" class="w-48 p-2 border border-gray-300 rounded">
+                        <option value="1">指定なし</option>
+                        <option value="2">醤油</option>
+                        <option value="3">塩</option>
+                        <option value="4">味噌</option>
+                        <option value="5">豚骨</option>
+                    </select>
+                </div>
+        
+                <!-- 価格フィルタリングのスライダー -->
+                <div class="flex items-center space-x-2">
+                    <p class="mb-0">価格</p>
+                    <div class="flex-1">
+                        <input id="range-price" type="range" name="price" min="0" max="1200" step="100" value="1000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" oninput="updateOutput()"/>
+                        <output id="output-value" name="op1" class="w-full">1000円以内</output>
+                    </div>
+                </div>
+        
+                <!-- 位置情報取得 -->
+                <div class="flex justify-center">
+                    <p>現在地からの距離</p>
+                </div>
+        
+                <div class="flex justify-center">
+                    <button type="submit" id="submit" class="mt-4 p-2 bg-blue-500 text-white rounded">SEARCH</button>
+                </div>
+            </form>
+        </div>
+        
+    </main>
+    <footer>
+        <img src="../images/中華マーク並び.png" alt="中華">
+    </footer>
+    <script src="../js/search.js"></script>
+</body>
+</html>
