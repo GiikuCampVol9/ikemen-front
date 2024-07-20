@@ -4,11 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../css/search.css"> -->
-    <link rel="stylesheet" href="../css/user/search.css">
-    <!-- <link rel="stylesheet" href="../css/input.css"> -->
-    <!-- <link rel="stylesheet" href="../css/myPage.css"> -->
-    <link rel="stylesheet" href="../css/search-rangeThumb.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>search</title>
 </head>
 <body class="h-screen ">
@@ -22,12 +19,12 @@
                 <!-- キーワード検索 -->
                 <div class="flex items-center justify-center space-x-4 border-b-2 border-b-red-700 h-[10%]">
                     <div>
-                        <img src="../images/スクリーンショット 2024-07-20 114448.png" alt="searchImage" class="h-8 w-8 object-cover"> <!-- 画像のパスとサイズを指定 -->
+                        <i class="material-icons mt-2" style="color: red; font-size: 40px;" aria-label="name icon">search</i> <!-- 画像のパスとサイズを指定 -->
                     </div>
                     <div>
                         <label for="ikemen-search"></label>
                         <input type="search" name="ikemen-search" id="ikemen-search" placeholder="キーワードから検索"
-                            class="w-full px-2">
+                            class="text-lg w-full p-2">
                     </div>
                 </div>
 
@@ -84,13 +81,13 @@
         <div>
             <ul class="flex bg-red-700 justify-center items-center gap-32">
                 <li class="w-28 h-20 flex items-center justify-center">
-                   <img src="../images/投稿.png" alt="投稿"> 
+                    <a href="send.html"><img src="../images/投稿.png" alt="投稿"></a>
                 </li>
                 <li class="fixed z-10  bottom-6 bg-red-700 w-28 h-28 rounded-full p-1 flex items-center justify-center drop-shadow-[0px_0px_0px_0px_rgba(0,0,0,0.25)]">
-                    <img class="mr-auto ml-auto " src="../images/ホーム.png" alt="ホーム">
+                    <a href="#"><img class="mr-auto ml-auto " src="../images/ホーム.png" alt="ホーム"></a>
                 </li>
                 <li class="w-28 h-20 flex items-center justify-center">
-                    <img src="../images/マイページ.png" alt="マイページ">
+                    <a href="myPage.html"><img src="../images/マイページ.png" alt="マイページ"></a>
                 </li>
             </ul>
         </div>
