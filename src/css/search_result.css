@@ -566,8 +566,16 @@ video {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .bottom-9 {
   bottom: 2.25rem;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .right-1 {
@@ -618,6 +626,10 @@ video {
   margin-top: 2.75rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -644,6 +656,10 @@ video {
 
 .h-2\/3 {
   height: 66.666667%;
+}
+
+.h-2\/5 {
+  height: 40%;
 }
 
 .h-20 {
@@ -810,6 +826,11 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -853,6 +874,15 @@ video {
 .bg-red-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\.\.\/images\/map\.png\'\)\] {
+  background-image: url('../images/map.png');
 }
 
 .bg-contain {

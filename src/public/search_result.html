@@ -6,29 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/search_result.css">
     <title>Document</title>
+    <style>
+        
+        .card {
+            /* background-color: red; */
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 80%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
 </head>
 
-<body>
+<body class="overflow-hidden h-screen">
     <header>
-        <div class="header">
-            <div class="header-image">
-
+        <img src="../images/中華マーク並び.png" alt="中華">
+        <div class="flex items-center p-2 justify-between">
+            <div class="flex gap-2">
+                <h2>#醤油</h2>
+                <h2>#1000円代</h2>
             </div>
-            <div class="search-entry">
-                <div class="header-tags">
-                    <h2>#醤油</h2>
-                    <h2>#1000円代</h2>
-                </div>
-                <img src="../images/検索.svg" alt="検索">
-            </div>
+            <img src="../images/検索.svg" alt="検索">
         </div>
     </header>
-
-    <main>
-        <div class="ramen-list">
-            <div class="card-container"></div>
+    <main class="h-2/3 mt-20 mb-18 bg-[url('../images/map.png')]">
+        <div class="amen-list flex  w-full h-2/5 bg-white rounded-t-2xl overflow-scroll">
+            <div class="card-container w-full flex flex-col items-center"></div>
         </div>
     </main>
+    <footer>
+        <img src="../images/中華マーク並び.png" alt="中華">
+        <div>
+            <ul class="flex bg-red-700 justify-center items-center gap-32">
+                <li class="w-28 h-20 flex items-center justify-center">
+                    <img src="../images/投稿.png" alt="投稿">
+                </li>
+                <li class="fixed z-10  bottom-9 bg-red-700 w-28 h-28 rounded-full p-1 flex items-center justify-center">
+                    <img class="mr-auto ml-auto " src="../images/ホーム.png" alt="ホーム">
+                </li>
+                <li class="w-28 h-20 flex items-center justify-center">
+                    <img src="../images/マイページ.png" alt="マイページ">
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 <!-- バージョン9のSDKを追加 -->
