@@ -52,7 +52,7 @@ function createCard(data) {
                         <td colspan="2">現在地から<span>${data.距離}</span></td>
                     </tr>
                 </table>
-                <img src="${data.写真}" alt="${data.店名}" height="90" width="100">
+                <img class="object-cover h-20 w-24" src="${data.写真}" alt="${data.店名}" height="90" width="100">
             </div>
         `
     ;
