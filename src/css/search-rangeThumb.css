@@ -1,0 +1,22 @@
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%; /* rounded-full */
+    background: #B91C1C; /* bg-red-700 */
+    cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%; /* rounded-full */
+    background: #B91C1C; /* bg-red-700 */
+    cursor: pointer;
+}
+input[type=range]::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%; /* rounded-full */
+    background: #B91C1C; /* bg-red-700 */
+    cursor: pointer;
+}

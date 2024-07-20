@@ -4,73 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/search.css">
-    <link rel="stylesheet" href="../css/input.css">
-    <link rel="stylesheet" href="../css/myPage.css">
+    <!-- <link rel="stylesheet" href="../css/search.css"> -->
+    <link rel="stylesheet" href="../css/user/search.css">
+    <!-- <link rel="stylesheet" href="../css/input.css"> -->
+    <!-- <link rel="stylesheet" href="../css/myPage.css"> -->
+    <link rel="stylesheet" href="../css/search-rangeThumb.css">
     <title>search</title>
 </head>
-
 <body class="h-screen ">
     <header>
         <img src="../images/中華マーク並び.png" alt="中華">
     </header>
-    <main class="h-4/5 mt-10 mb-10">
-            <div class="size-12 flex items-center justify-center border-solid border border-red-700">
-                <form action="#" method="post" class="space-y-4 w-5/6">
-                    <!-- キーワード検索 -->
-                    <div class="search">
+    
+    <main class="flex justify-center h-[70%] items-center mt-8 mb-4">
+        <div class="bg-white border-red-700 border-[3px] text-lg h-full rounded-2xl">
+            <form action="#" method="post" class="space-y-4 p-2 h-full w-80 border-1 rounded-[12px] shadow-red-700 shadow-md">
+                <!-- キーワード検索 -->
+                <div class="flex items-center justify-center space-x-4 border-b-2 border-b-red-700 h-[10%]">
+                    <div>
+                        <img src="../images/スクリーンショット 2024-07-20 114448.png" alt="searchImage" class="h-8 w-8 object-cover"> <!-- 画像のパスとサイズを指定 -->
+                    </div>
+                    <div>
                         <label for="ikemen-search"></label>
                         <input type="search" name="ikemen-search" id="ikemen-search" placeholder="キーワードから検索" required
-                            class="w-full p-2 border border-gray-300 rounded">
+                            class="w-full px-2">
                     </div>
+                </div>
 
-                    <!-- 種類の指定 -->
-                    <div class="flex items-center space-x-6">
-                        <p class="mb-0 text-red-300">味</p>
-                        <select id="taste" name="taste" class="w-48 p-2 border border-gray-300 rounded">
-                            <option value="1">指定なし</option>
-                            <option value="2">醤油</option>
-                            <option value="3">塩</option>
-                            <option value="4">味噌</option>
-                            <option value="5">豚骨</option>
-                        </select>
-                    </div>
+                <div class="h-[85%]">
+                    <div class="bg-white border-2 border-red-700 rounded-2xl mx-2 p-2 h-full">
+                        <!-- 種類の指定 -->
+                        <div class="flex flex-col mx-4 h-full justify-center">
+                            <div class="flex items-center space-x-6 mb-10">
+                                <p class="font-bold text-xl">味</p>
+                                <select id="taste" name="taste" class="w-48 p-2 border border-gray-300 rounded">
+                                    <option value="1">指定なし</option>
+                                    <option value="2">醤油</option>
+                                    <option value="3">塩</option>
+                                    <option value="4">味噌</option>
+                                    <option value="5">豚骨</option>
+                                </select>
+                            </div>
 
-                    <!-- 価格フィルタリングのスライダー -->
-                    <div class="flex items-center space-x-2">
-                        <p class="mb-0">価格</p>
-                        <div class="flex-1 w-24">
-                            <input id="range-price" type="range" name="price" min="0" max="1200" step="100" value="1000"
-                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-                                oninput="updateOutput()" />
-                            <output id="output-value" name="op1" class="w-full">1000円以内</output>
+                            <!-- 価格フィルタリングのスライダー -->
+                            <div class="my-4">
+                                <p class="font-bold text-xl">価格</p>
+                                <div>
+                                    <input id="range-price" type="range" name="price" min="0" max="1200" step="100" value="1000"
+                                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-300"
+                                        oninput="updateOutput()" />
+                                    <output id="output-value" name="op1" class="w-full flex justify-center mt-1">1000円以内</output>
+                                </div>
+                            </div>
+
+                            <!-- 位置情報取得 -->
+                            <div class="my-4">
+                                <p class="font-bold text-xl">現在地からの距離</p>
+                                <div>
+                                    <input id="range-distance" type="range" name="" min="0" max="1200" step="100" value="0"
+                                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-300"/>
+                                </div>
+                                <p class="flex justify-center mt-1">指定しない</p>
+                            </div>
+
+                            <!-- 検索ボタン -->
+                            <div class="flex justify-center my-4">
+                                <button type="submit" id="submit" class="mt-4 p-2 bg-red-700 text-white rounded-xl w-3/5">SEARCH</button>
+                            </div>
                         </div>
                     </div>
-
-                    <script src="../js/search.js"></script>
-
-                    <!-- 位置情報取得 -->
-                     <div class="flex justify-center">
-                        <p>現在地からの距離</p>
-                    </div>
-
-                    <div class="flex justify-center">
-                        <button type="submit" id="submit"
-                            class="mt-4 p-2 bg-blue-500 text-white rounded">SEARCH</button>
-                    </div>
-                </form>
-            </div>
-
+                </div>
+            </form>
+        </div>
     </main>
 
-    <footer>
+    <footer class="absolute bottom-0">
         <img src="../images/中華マーク並び.png" alt="中華">
         <div>
             <ul class="flex bg-red-700 justify-center items-center gap-32">
                 <li class="w-28 h-20 flex items-center justify-center">
-                    <img src="../images/投稿.png" alt="投稿">
+                   <img src="../images/投稿.png" alt="投稿"> 
                 </li>
-                <li class="fixed z-10  bottom-9 bg-red-700 w-28 h-28 rounded-full p-1 flex items-center justify-center">
+                <li class="fixed z-10  bottom-6 bg-red-700 w-28 h-28 rounded-full p-1 flex items-center justify-center drop-shadow-[0px_0px_0px_0px_rgba(0,0,0,0.25)]">
                     <img class="mr-auto ml-auto " src="../images/ホーム.png" alt="ホーム">
                 </li>
                 <li class="w-28 h-20 flex items-center justify-center">
@@ -79,6 +94,8 @@
             </ul>
         </div>
     </footer>
-</body>
 
+    <script src="../js/search.js"></script>
+
+</body>
 </html>
