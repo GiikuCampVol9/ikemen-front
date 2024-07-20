@@ -1026,6 +1026,26 @@ video {
   background-image: url('../images/map.png');
 }
 
+.bg-\[url\(\'\.\.\/images\/\.png\'\)\] {
+  background-image: url('../images/.png');
+}
+
+.bg-\[url\(\'\.\.\/images\/\FF52\.png\'\)\] {
+  background-image: url('../images/ｒ.png');
+}
+
+.bg-\[url\(\'\.\.\/images\/ra\.png\'\)\] {
+  background-image: url('../images/ra.png');
+}
+
+.bg-\[url\(\'\.\.\/images\/ramen-back\.png\'\)\] {
+  background-image: url('../images/ramen-back.png');
+}
+
+.bg-\[url\(\'\.\.\/\/images\/ramen-back\.png\'\)\] {
+  background-image: url('..//images/ramen-back.png');
+}
+
 .bg-contain {
   background-size: contain;
 }
