@@ -18,7 +18,7 @@
     
     <main class="flex justify-center h-[70%] items-center mt-8 mb-4">
         <div class="bg-white border-red-700 border-[3px] text-lg h-full rounded-2xl">
-            <form action="#" method="post" class="space-y-4 p-2 h-full w-80 border-1 rounded-[12px] shadow-red-700 shadow-md">
+            <form action="search_result.html" class="space-y-4 p-2 h-full w-80 border-1 rounded-[12px] shadow-red-700 shadow-md">
                 <!-- キーワード検索 -->
                 <div class="flex items-center justify-center space-x-4 border-b-2 border-b-red-700 h-[10%]">
                     <div>
@@ -26,7 +26,7 @@
                     </div>
                     <div>
                         <label for="ikemen-search"></label>
-                        <input type="search" name="ikemen-search" id="ikemen-search" placeholder="キーワードから検索" required
+                        <input type="search" name="ikemen-search" id="ikemen-search" placeholder="キーワードから検索"
                             class="w-full px-2">
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                                     <input id="range-price" type="range" name="price" min="0" max="1200" step="100" value="1000"
                                         class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-300"
                                         oninput="updateOutput()" />
-                                    <output id="output-value" name="op1" class="w-full flex justify-center mt-1">1000円以内</output>
+                                    <output id="output-value" name="price" class="w-full flex justify-center mt-1">1000円以内</output>
                                 </div>
                             </div>
 
@@ -61,10 +61,11 @@
                             <div class="my-4">
                                 <p class="font-bold text-xl">現在地からの距離</p>
                                 <div>
-                                    <input id="range-distance" type="range" name="" min="0" max="1200" step="100" value="0"
-                                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-300"/>
+                                    <input id="range-distance" type="range" name="distance" min="0" max="1000" step="100" value="0"
+                                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-300"
+                                        oninput="distanceOutput()"/>
+                                    <output id="output-distance" name="distance" class="w-full flex justify-center mt-1">指定しない</output>
                                 </div>
-                                <p class="flex justify-center mt-1">指定しない</p>
                             </div>
 
                             <!-- 検索ボタン -->
