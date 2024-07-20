@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/send.css">
+    <title>sendPage</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label for="picture">写真</label>
+            <input type="file" name="picture" placeholder="写真" id="picture" />
+        </div>
+
+        <div>
+            <label for="name">商品名</label>
+            <input type="text" name="name" placeholder="醤油ラーメン" id="name" />
+        </div>
+
+        <div>
+            <label for="taste">味</label>
+            <input type="radio" name="taste" value="醤油">醤油
+            <input type="radio" name="taste" value="味噌">味噌
+            <input type="radio" name="taste" value="塩">塩
+            <input type="radio" name="taste" value="豚骨">豚骨
+        </div>
+
+        <div>
+            <label for="taste">価格</label>
+            <input type="radio" name="price" value="800円以下">800円以下
+            <input type="radio" name="price" value="800円代">800円代
+            <input type="radio" name="price" value="900円代">900円代
+            <input type="radio" name="price" value="1000円代">1000円代
+        </div>
+
+        <div>
+            <label for="link">店舗リンク</label>
+            <input type="text" name="link" placeholder="https://x.gd/7HuUV" id="link" />
+        </div>
+
+        <div>
+            <label for="comment">コメント</label>
+            <input type="text" name="comment" placeholder="コメント" id="comment" />
+        </div>
+
+        <button class="login-btn" onclick="registerData()">投稿</button>
+    </div>
+
+    <!-- モーダルの処理 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>データが登録されました！</p>
+        </div>
+    </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-storage-compat.js"></script>
+
+<script src="send.js"></script>
+
+</html>
