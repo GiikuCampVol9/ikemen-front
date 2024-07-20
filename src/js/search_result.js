@@ -40,7 +40,7 @@ function createCard(data) {
     const cardContent =
         `
             <div class="card-content">
-                <table>
+                <table class="mr-20">
                     <tr>
                         <th colspan="2"><span>${data.店名}</span></th>
                     </tr>
