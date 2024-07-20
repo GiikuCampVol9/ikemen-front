@@ -18,23 +18,23 @@
         <div class="flex flex-col items-center">
             <div class="border-2 w-24 h-24 rounded-full border-red-700 flex items-center justify-center">
                 <!-- <i class="material-icons text-red-700" style="font-size: 80px;" aria-label="person icon">person</i> -->
-                 <input type="file" name="icon" id="icon" required>
+                 <input class="p-1.5 text-xs" type="file" name="icon" id="icon" required>
             </div>
             <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
                 <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="name icon">person</i>
-                <input class="text-gray-300 ml-6 text-2xl w-32" type="text" name="name" id="name" placeholder="ナマエ" required>
+                <input class="text-gray-300 ml-6 text-lg w-32 p-2" type="text" name="name" id="name" placeholder="ナマエ" required>
             </div>
             <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
                 <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="email icon">mail</i>
-                <input class="text-gray-300 ml-6 text-2xl w-32" type="text" name="email" id="email" placeholder="メール"required>
+                <input class="text-gray-300 ml-6 text-lg w-32 p-2" type="text" name="email" id="email" placeholder="メール"required>
             </div>
             <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
                 <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="password icon">lock</i>
-                <input class="text-gray-300 ml-6 text-2xl w-32" type="password" name="pass" id="pass" placeholder="パスワード(6字以上)" required>
+                <input class="text-gray-300 ml-6 text-lg w-32 p-2" type="password" name="pass" id="pass" placeholder="パスワード" required>
             </div>
             <!-- <button onclick="location.href='./myPage.html'" class="mt-10 px-4 py-2 bg-red-700 text-white rounded">作成</button> -->
 
-            <button onclick= "userCreate()" class="mt-10 px-4 py-2 bg-red-700 text-white rounded">作成</button>
+            <button onclick= "userCreate()" class="mt-10 px-20 rounded-2xl py-3 text-xl bg-red-700 text-white">作成</button>
         </div>
     </main>
     <footer class="flex justify-center">

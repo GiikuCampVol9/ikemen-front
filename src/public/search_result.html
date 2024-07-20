@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/search_result.css" />
+    <title>Document</title>
+    <style>
+        .card-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 4px solid #b91c1c;
+          padding: 0.75rem 1.5rem; 
+          border-radius: 1rem; 
+          box-shadow: 0 4px 6px -1px rgba(185, 28, 28, 0.25),
+            0 2px 4px -1px rgba(185, 28, 28, 0.25); 
+          margin-bottom: 0.75rem; 
+        }
+    </style>
+  </head>
+
+  <body class="overflow-hidden h-screen">
+    <header class="h-10">
+      <img src="../images/中華マーク並び.png" alt="中華" />
+      <div class="flex items-center p-2 justify-between">
+        <div class="flex gap-2 text-2xl">
+          <h2>#醤油</h2>
+          <h2>#1000円代</h2>
+        </div>
+        <a href="search.html"><img src="../images/検索.png" alt="検索" /></a>
+      </div>
+    </header>
+    <main
+      class="bg-[url('../images/map.png')] flex flex-col justify-end mt-16 bg-bottom bg-cover"
+      style="height: 79%"
+    >
+      <div
+        class="ramen-list flex w-full h-1/5 bg-white rounded-t-2xl overflow-scroll"
+        style="height: 30%;">
+        <div class="card-container w-full flex flex-col items-center"></div>
+      </div>
+    </main>
+    <footer >
+        <div>
+          <ul class="flex bg-red-700 justify-center items-center gap-32">
+            <li class="w-28 h-20 flex items-center justify-center">
+              <a href="send.html"><img src="../images/投稿.png" alt="投稿" /></a>
+            </li>
+            <li
+              class="fixed z-10 bottom-2 bg-red-700 w-28 h-28 rounded-full p-1 flex items-center justify-center">
+              <a href="#">
+              <img src="../images/ホーム.png" alt="ホーム"/>
+            </a>
+            </li>
+            <li class="w-28 h-20 flex items-center justify-center">
+              <a href="myPage.html"><img src="../images/マイページ.png" alt="マイページ" /></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    <!-- バージョン9のSDKを追加 -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../js/search_result.js"></script>
+  </body>
+</html>
