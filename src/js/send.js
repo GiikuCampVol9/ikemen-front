@@ -16,6 +16,41 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const iconTigger = document.getElementById('inputTigger');
+    const fileInput = document.getElementById('picture');
+
+    fileInput.addEventListener('change', function() {
+        const file = this.files[0];
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const imageUrl = event.target.result;
+
+            const imgElement = document.createElement('img');
+            imgElement.src = imageUrl;
+            imgElement.alt = 'selected icon';
+
+            imgElement.style.width = '80%';
+            imgElement.style.height = '100%';
+            imgElement.style.objectFit = 'cover';
+            imgElement.style.margin = 'auto';
+            imgElement.style.borderRadius = '10px';
+
+            // iconTiggerがnullでないことを確認してから追加する
+            if (iconTigger !== null) {
+                iconTigger.innerHTML = '';
+                iconTigger.appendChild(imgElement);
+            } else {
+                console.error('iconTiggerが見つかりません。');
+            }
+        };
+
+        reader.readAsDataURL(file);
+    });
+});
+
 async function registerData() {
     const picture = document.getElementById('picture').files[0];
     const name = document.getElementById('name').value;
