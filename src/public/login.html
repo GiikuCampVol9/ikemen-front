@@ -7,37 +7,42 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Login</title>
   </head>
-  <body class="h-screen overflow-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body class="h-screen overflow-hidden">
     <header class="sticky top-0">
       <img src="../images/中華マーク並び.png" alt="中華" />
     </header>
-    <main class="relative">
+    <main class="relative z-10 bg-custom-image bg-no-repeat bg-contain bg-bottom" style="background-image: url('../images/ramen-back.png'); height: 90%;">
       
-      <img src=" ../images/イケ麺ドットコム 1.svg" alt="logo" />
-      <img class="relative" src="../images/ramen-back.png" alt="ramen-back" />
-      
-      <div class="absolute left-24 bottom-32">
+      <img class="relative" src="../images/イケ麺ドットコム 1.svg" alt="logo" />
+      <!-- Corrected the background image setting by moving it to a style attribute -->
+    
+      <div class="absolute left-1/2 bottom-32 -translate-x-1/2">
         <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
-            <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="email icon">mail</i>
-            <input class="text-gray-300 ml-6 text-2xl w-32 p-2" type="text" name="name" id="name" placeholder="メール">
+            <i class="material-icons bg-white pr-5 text-red-700" style="font-size: 40px;" aria-label="email icon">mail</i>
+            <input class="text-gray-300 text-2xl w-32 p-2" type="text" name="email" id="email" placeholder="メール">
+            <!-- Changed the name and id attributes to "email" for the email input -->
         </div>
         <div class="border-b-2 w-48 h-auto flex border-red-700 mt-10">
-            <i class="material-icons text-red-700" style="font-size: 40px;" aria-label="password icon">lock</i>
-            <input class="text-gray-300 ml-6 text-2xl w-32 p-2" type="text" name="name" id="name" placeholder="パスワード">
+            <i class="material-icons bg-white pr-5 text-red-700" style="font-size: 40px;" aria-label="password icon">lock</i>
+            <input class="text-gray-300 text-2xl w-32 p-2" type="password" name="password" id="password" placeholder="パスワード">
+            <!-- Changed type to "password" and corrected the name and id attributes for the password input -->
         </div>
         <button
-          class="bg-red-700 mt-10 p-3 px-20 rounded-2xl text-xl text-white"
+          class="bg-red-700 mt-10 p-3 px-16 rounded-2xl text-xl text-white"
           type="submit"
-          onclick="location.href='home.html'"
-        >
-          ログイン
-        </button>
-      <a class="block mt-5 text-center" href="userCreate.html">新規登録は<span class="underline">こちら</span></a>
-    </div>
+          onclick="location.href='home.html'">ログイン</button>
+          <!-- Added closing tag for button -->
+        </div>
     </main>
-
-    <footer class="fixed bottom-0">
+    <footer class="relative z-20 -mt-20 flex justify-center">
       <img src="../images/中華マーク並び.png" alt="中華" />
     </footer>
-  </body>
+</body>
 </html>
