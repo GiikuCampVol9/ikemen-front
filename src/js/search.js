@@ -1,7 +1,7 @@
 function updateOutput() {
     var rangeInput = document.getElementById('range-price');
     var output = document.getElementById('output-value');
-    output.value = rangeInput.value + "円以内";
+    output.value = rangeInput.value > 700 ? rangeInput.value + "円台" : "800円以下";
 }
 
 function distanceOutput() {
