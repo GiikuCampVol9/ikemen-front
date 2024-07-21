@@ -65,6 +65,14 @@ async function registerData() {
 function showModal() {
     const modal = document.getElementById("myModal");
     modal.style.display = "block";
+    setTimeout(() => {
+        closeModalAndRedirect();
+    }, 2000); //2秒間
+}
+
+function closeModalAndRedirect() {
+    closeModal();
+    window.location.href = "home.html";
 }
 
 function closeModal() {
