@@ -660,6 +660,22 @@ video {
   top: 2.25rem;
 }
 
+.bottom-20 {
+  bottom: 5rem;
+}
+
+.bottom-40 {
+  bottom: 10rem;
+}
+
+.bottom-60 {
+  bottom: 15rem;
+}
+
+.bottom-56 {
+  bottom: 14rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -790,6 +806,26 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.-mt-16 {
+  margin-top: -4rem;
+}
+
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.-mt-40 {
+  margin-top: -10rem;
+}
+
+.-mt-36 {
+  margin-top: -9rem;
 }
 
 .block {
