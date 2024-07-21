@@ -17,6 +17,33 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 const storage = firebase.storage();
 
+//  アイコンの選択
+const iconTigger = document.getElementById('icon-tigger');
+const fileInput = document.getElementById('icon');
+
+// アイコンをクリックしたらファイル選択ダイアログを開く
+iconTigger.addEventListener('click', function() {
+    fileInput.click();
+});
+
+// ファイル選択後に画像をプレビューする処理
+fileInput.addEventListener('change', function() {
+    const file = this.files[0]; // 選択されたファイルを取得
+
+    // FileReaderオブジェクトを使用して画像を読み込む
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const imageUrl = event.target.result; // 読み込んだ画像のURL
+
+        // iタグのinnerHTMLを変更してプレビューを表示
+        iconTigger.innerHTML = `<img src="${imageUrl}" alt="selected icon" style="width: 100%; height: 100%; border-radius: 50%;">`;
+    };
+    
+    // 画像を読み込む
+    reader.readAsDataURL(file);
+});
+
+
 let uid = "";
 
 function userCreate() {
@@ -35,7 +62,6 @@ function userCreate() {
             console.log('uid', uid);
 
             userCreateName();
-            // navigateToPage();
         })
         .catch((error) => {
             // ユーザー登録失敗時の処理
@@ -47,7 +73,7 @@ function userCreateName() {
     console.log('userCreateName 関数が呼び出されました');
 
     const name = document.getElementById("name").value;    
-    const fileInput = document.getElementById('icon');    
+    // const fileInput = document.getElementById('icon');    
     const file = fileInput.files[0];
     const created_at = firebase.firestore.FieldValue.serverTimestamp();
 
@@ -72,9 +98,6 @@ function userCreateName() {
             db.collection("user").add({
                 uid: uid,
                 name: name,
-                // 画像のパス(変更削除するときにいるはず)
-                // prof_img: path,
-                // 表示するようのなんとか
                 profileUrl: downloadURL,
                 created_at: created_at
             }).then(docRef => {
@@ -91,23 +114,3 @@ function navigateToPage () {
     //  ページ遷移
     location.href='./home.html';
 }
-
-// function userLogin() {
-//     console.log('userLogin 関数が呼び出されました');
-    
-//     const email = document.getElementById('email').value;
-//     const password = document.getElementById('pass').value;
-    
-//     alert('email:' + email + ',password:' + password + 'でログインします');
-
-//     // ログイン
-//     firebase.auth().signInWithEmailAndPassword(email, password)
-//         .then((userCredential) => {
-//             // ログイン成功時の処理
-//             alert('ログインしました:' + userCredential.user);
-//         })
-//         .catch((error) => {
-//             // ログイン失敗時の処理
-//             alert('ログインエラー:' + error.message);
-//         });
-// }

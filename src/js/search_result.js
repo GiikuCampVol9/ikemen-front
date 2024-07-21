@@ -16,7 +16,7 @@ const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 // コレクションデータ取得
-const collectionRef = db.collection('cardTest');
+const collectionRef = db.collection('cardTest').where('味', '==', '醤油').where('値段', '==', '1000円代');
 collectionRef.get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         if (doc.exists) {
